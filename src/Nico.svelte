@@ -1,4 +1,30 @@
 <script lang="ts">
+let services: { id: number, name: string, price : number , duration : string }[] =[
+  {
+    id : 1 , 
+    name : 'Massage Suédois',
+    price : 70 , 
+    duration : '1h'
+  },
+  {
+    id : 2 ,
+    name : 'Massage Abhyanga ayurveda',
+    price : 90 , 
+    duration : '1h30'
+  }
+];
+
+let avis: { id: number, title: string}[] =[
+  { id : 1 , title : 'Avis 1'},
+  { id : 2 , title : 'Avis 2'}
+];
+
+let infos:object = {
+  name : '' ,
+  address: '1 rue de la Grande Montée, Lyon 69004' ,
+  phone : '+88123 4567 890' ,
+  email : 'nicolasberteyac@gmail.com' 
+}
 
 </script>
 
@@ -251,7 +277,7 @@
                                         <i class="lni-phone-handset"></i>
                                     </div>
                                     <div class="info-content">
-                                        <p>+88 1234 56789</p>
+                                        <p>{infos.phone}</p>
                                     </div>
                                 </div> <!-- single info -->
                             </li>
@@ -261,7 +287,7 @@
                                         <i class="lni-envelope"></i>
                                     </div>
                                     <div class="info-content">
-                                        <p>contact@yourmail.com</p>
+                                        <p>{infos.email}</p>
                                     </div>
                                 </div> <!-- single info -->
                             </li>
@@ -271,7 +297,7 @@
                                         <i class="lni-home"></i>
                                     </div>
                                     <div class="info-content">
-                                        <p>203, Envato Labs, Behind Alis Steet,Australia</p>
+                                        <p>{infos.address}</p>
                                     </div>
                                 </div> <!-- single info -->
                             </li>
@@ -336,23 +362,19 @@
                       <div class="footer-link mt-50">
                           <h5 class="f-title">Services</h5>
                           <ul>
-                              <li><a href="#">Architechture Design</a></li>
-                              <li><a href="#">Interior Design</a></li>
-                              <li><a href="#">Autocad Services</a></li>
-                              <li><a href="#">Lighting Design</a></li>
-                              <li><a href="#">Poster Design</a></li>
+                              {#each services as serv}
+                              <li><a href="#">{serv.name}</a></li>
+                              {/each}
                           </ul>
                       </div> <!-- footer link -->
                   </div>
                   <div class="col-lg-2 col-md-3 col-sm-5">
                       <div class="footer-link mt-50">
-                          <h5 class="f-title">Help</h5>
+                          <h5 class="f-title">Avis</h5>
                           <ul>
-                              <li><a href="#">Forum</a></li>
-                              <li><a href="#">Blog</a></li>
-                              <li><a href="#">Help Center</a></li>
-                              <li><a href="#">Contact Us</a></li>
-                              <li><a href="#">Privacy Policy</a></li>
+                              {#each avis as av}
+                              <li><a href="#">{av.title}</a></li>
+                              {/each}
                           </ul>
                       </div> <!-- footer link -->
                   </div>
@@ -362,10 +384,9 @@
                           <ul>
                               <li>
                                   <div class="single-footer-info mt-20">
-                                      <span>Phone :</span>
+                                      <span>Téléphone :</span>
                                       <div class="footer-info-content">
-                                          <p>+88123 4567 890</p>
-                                          <p>+88123 4567 890</p>
+                                          <p>{infos.phone}</p>
                                       </div>
                                   </div> <!-- single footer info -->
                               </li>
@@ -373,16 +394,15 @@
                                   <div class="single-footer-info mt-20">
                                       <span>Email :</span>
                                       <div class="footer-info-content">
-                                          <p>contact@yourmail.com</p>
-                                          <p>support@yourmail.com</p>
+                                         <p>{infos.email}</p>
                                       </div>
                                   </div> <!-- single footer info -->
                               </li>
                               <li>
                                   <div class="single-footer-info mt-20">
-                                      <span>Address :</span>
+                                      <span>Addresse :</span>
                                       <div class="footer-info-content">
-                                          <p>5078 Jensen Key, Port Kaya, WV 73505</p>
+                                         <p>{infos.address}</p>
                                       </div>
                                   </div> <!-- single footer info -->
                               </li>
