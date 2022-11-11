@@ -1,0 +1,159 @@
+{
+	"infos" : {
+		"name" : "" ,
+		"address": "1 rue de la Grande Montée, Lyon 69004" ,
+		"phone" : "+33 6 80 54 03 56" ,
+		"email" : "nicolasberteyac@gmail.com",
+		"facebook" : "nicolasberteyac"
+	},
+	"about" : [
+		{
+		    "id" : 1 , 
+		    "title" : "Enfance" ,
+		    "text" : "Plus de 10 ans de gym au haut niveau étant jeune m’ont permis de connaître mon corps et d’etre massé aux entrainements. Le massage m’a aussi été transmis par ma mère, professeur de sport qui me massait après les entrainements egalement.",
+		    "picture" : "./assets/images/about/nico_1.jpg" 
+		},
+		{
+			"id" : 2 , 
+			"title" : "Les origines du massage" ,
+			"text" : "J’ai toujours massé les gens autour de moi jusqu’au jour ou j’ai été bloqué dans mes mouvements. C'est ainsi que j’ai eu envie d’apprendre le massage de manière professionnel.",
+			"picture" : "./assets/images/about/nico_2.jpg" 
+		},
+		{
+			"id" : 3 , 
+			"title" : "Formation" ,
+			"text" : "Formé par « A fleur de peau » il ya un an et demi, j’ai depuis deplacé ma table dans toute la France pour régaler mes amis et la famille. Aujourd’hui j’ai envie de vous transmettre ce ressenti." , 
+			"picture" : "./assets/images/about/nico_3.jpg"
+		},
+		{
+			"id" : 4 , 
+			"title" : "Mon métier" ,
+			"text" : "Je travaillle dans le cinema en tant que directeur de la photographie mais loin des plateaux, cette activité apaisante et à la fois dans le don de soi de son energie ...",
+			"picture" : "./assets/images/about/nico_4.jpg" 
+		}
+	],
+	"services" : [
+		{
+			"id" : 0 ,
+			"class" : "reflexo" ,
+			"name" : "Massage reflexo plantaire thaï de détente",
+			"price" : 60 , 
+			"duration" : "1h",
+			"picture" : "./assets/images/services/nature-1.jpg",
+			"desc" : "La réflexologie thai plantaire est une technique de massage relaxante visant a procurer un état d’équilibre et d’harmonie du corps et de l’esprit."
+		},
+		{
+			"id" : 1 ,
+			"class" : "reflexo" ,
+			"name" : "Massage reflexo plantaire thaï de détente",
+			"price" : 60 , 
+			"duration" : "1h",
+			"picture" : "./assets/images/services/nature-2.jpg",
+			"desc" : "Le pied est la représentation miniaturisée du corps humain, à chaque zone réflexe correspond un organe, une glande ou une partie du corps"
+		},
+		{
+			"id" : 1 ,
+			"class" : "reflexo" ,
+			"name" : "Massage reflexo plantaire thaï de détente",
+			"price" : 60 , 
+			"duration" : "1h",
+			"picture" : "./assets/images/services/nature-3.jpg",
+			"desc" : "Des pressions sont pratiquées sur les zones réflexes, les points énergétiques et les méridiens grâce a des techniques particulières du pouce, des doigts, et à l’aide d’un bâtonnet provoquant des modifications physiologiques en stimulant les défenses naturelles du corps."
+		},
+		{
+			"id" : 1 ,
+			"class" : "reflexo" ,
+			"name" : "Massage reflexo plantaire thaï de détente",
+			"price" : 60 , 
+			"duration" : "1h",
+			"picture" : "./assets/images/services/nature-4.jpg",
+			"desc" : "Bienfaits : équilibre énergétiquement le corps, procure bien-être, détente et sérénité, lutte contre la fatigue passagère, efface les tensions, renforce la vitalité, troubles digestifs "
+		},
+		{
+		    "id" : 4 , 
+		    "class" : "suedois" ,
+		    "name" : "Massage Suédois",
+		    "price" : 75 , 
+		    "duration" : "1h15",
+			"picture" : "./assets/images/services/suedois2.jpg",
+			"desc" : "Massage décontractant, tonique et relaxant soulageant vos tensions musculaires en profondeur à l'aide de pétrissage, percussions ou encore vibrations, permettant à votre corps de retrouver tonus et vitalité."
+  		},
+		{
+		    "id" : 4 , 
+		    "class" : "suedois" ,
+		    "name" : "Massage Suédois",
+		    "price" : 75 , 
+		    "duration" : "1h15",
+			"picture" : "./assets/images/services/suedois3.jpg",
+			"desc" : "Il se pratique entre autres chez les sportifs en vue d’une séance de sport mais souvent après la séance, le lendemain ou surlendemain."
+  		},
+		{
+		    "id" : 4 , 
+		    "class" : "suedois" ,
+		    "name" : "Massage Suédois",
+		    "price" : 75 , 
+		    "duration" : "1h15",
+			"picture" : "./assets/images/services/suedois4.jpg",
+			"desc" : "Cependant il est également apprécié pour les non sportifs car il stimule la circulation sanguine pour une meilleure oxygénation et élimination des toxines et rééquilibre naturel du corps."
+  		},
+		{
+		    "id" : 4 , 
+		    "class" : "suedois" ,
+		    "name" : "Massage Suédois",
+		    "price" : 75 , 
+		    "duration" : "1h15",
+			"picture" : "./assets/images/services/suedois1.jpg",
+			"desc": "Dos epaules jambes et musculature en general"
+  		},
+		{
+			"id" : 6 ,
+			"class" : "ayurveda" ,
+			"name" : "Massage Abhyanga ayurveda",
+			"price" : 90 , 
+			"duration" : "1h30",
+			"picture" : "./assets/images/services/abhyanga-1.jpg",
+			"desc" : "Massage énergétique à l'huile tiède vous offrant harmonie et sérénité, accompagné de mouvements toniques, de pressions et de frictions, permettant d'apaiser les tensions nerveuses et de détoxifier l'organisme pour retrouver l'équilibre."
+		},
+		{
+			"id" : 6 ,
+			"class" : "ayurveda" ,
+			"name" : "Massage Abhyanga ayurveda",
+			"price" : 90 , 
+			"duration" : "1h30",
+			"picture" : "./assets/images/services/abhyanga-2.jpg" , 
+			"desc" : "Issu de l'Ayurveda, la médecine traditionnelle indienne, l'Abhyanga est un des massages les plus anciens (millénaire). Il vise à réduire la tension nerveuse, à améliorer la digestion et à dynamiser la circulation sanguine."
+		},
+		{
+			"id" : 6 ,
+			"class" : "ayurveda" ,
+			"name" : "Massage Abhyanga ayurveda",
+			"price" : 90 , 
+			"duration" : "1h30",
+			"picture" : "./assets/images/services/abhyanga-4.jpg", 
+			"desc" : "La technique comporte plusieurs manœuvres : effleurage, pétrissage, friction …C’est un massage global du corps, à la fois doux, tonique et rythmé."
+		},
+		{
+			"id" : 6 ,
+			"class" : "ayurveda" ,
+			"name" : "Massage Abhyanga ayurveda",
+			"price" : 90 , 
+			"duration" : "1h30",
+			"picture" : "./assets/images/services/abhyanga-5.jpg",
+			"desc" : "Il améliore la circulation des fluides corporels, la digestion, le fonctionnement du système nerveux. Il travaille aussi sur les articulations et le tonus musculaire. Sur le plan émotionnel, il apporte sérénité et plénitude, en agissant sur l'humeur, la confiance et l'estime de soi."
+		},
+		{
+			"id" : 6 ,
+			"class" : "ayurveda" ,
+			"name" : "Massage Abhyanga ayurveda",
+			"price" : 90 , 
+			"duration" : "1h30",
+			"picture" : "./assets/images/services/abhyanga-6.jpg",
+			"desc" : "Le massage abhyanga, littéralement « massage à l’huile » est une des pratiques les plus anciennes de la médecine ayurvédique. Issue de la tradition du nord de l’Inde, cette médecine sacrée attribue au massage abhyanga des vertus qui dépassent le simple effet relaxant et tonifiant d’un massage. Il en constitue la pierre angulaire et on éduque les enfants des l’âge de 6 ans à pratiquer le massage sur des adultes."
+		}
+	],
+	"avis" : [
+		{ "id" : 1 , "title" : "Des mains de féé" , "author" : "M. Smith" , "date" : "25 Octobre 2022" },
+		{ "id" : 2 , "title" : "Incroyable séance" , "author" : "Mme. Smith" , "date" : "02 Juillet 2022" },
+		{ "id" : 2 , "title" : "Au top, allez-y les yeux fermés" , "author" : "M. Dupond" , "date" : "17 Mars 2022" }
+	]
+}

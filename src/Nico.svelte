@@ -1,30 +1,12 @@
 <script lang="ts">
-let services: { id: number, name: string, price : number , duration : string }[] =[
-  {
-    id : 1 , 
-    name : 'Massage Suédois',
-    price : 70 , 
-    duration : '1h'
-  },
-  {
-    id : 2 ,
-    name : 'Massage Abhyanga ayurveda',
-    price : 90 , 
-    duration : '1h30'
-  }
-];
+import svelteLogo from './assets/svelte.svg'
+import viteLogo from './assets/vite.svg'
+import data from './assets/data.json';
 
-let avis: { id: number, title: string}[] =[
-  { id : 1 , title : 'Avis 1'},
-  { id : 2 , title : 'Avis 2'}
-];
-
-let infos:object = {
-  name : '' ,
-  address: '1 rue de la Grande Montée, Lyon 69004' ,
-  phone : '+88123 4567 890' ,
-  email : 'nicolasberteyac@gmail.com' 
-}
+let about: { id: number, text: string , picture : string}[] = data.about ;
+let services: { id: number, name: string, price : number , duration : string }[] = data.services ;
+let avis: { id: number, title: string}[] = data.avis ;
+let infos:object = data.infos ; 
 
 </script>
 
@@ -48,80 +30,40 @@ let infos:object = {
   <section id="home" class="slider-area pt-100">
       <div class="container-fluid position-relative">
           <div class="slider-active">
-              <div class="single-slider">
-                  <div class="slider-bg">
-                      <div class="row no-gutters align-items-center ">
-                          <div class="col-lg-4 col-md-5">
-                              <div class="slider-product-image d-none d-md-block">
-                                  <img src="assets/images/slider/1.jpg" alt="Slider">
-                                  <div class="slider-discount-tag">
-                                      <p>-50% <br> OFF</p>
-                                  </div>
-                              </div> <!-- slider product image -->
-                          </div>
-                          <div class="col-lg-8 col-md-7">
-                              <div class="slider-product-content">
-                                  <h1 class="slider-title mb-10" data-animation="fadeInUp" data-delay="0.3s"><span>Sofas</span> and <span>Armchairs</span></h1>
-                                  <p class="mb-25" data-animation="fadeInUp" data-delay="0.9s">One day however a small line of blind text by the name of Lorem Ipsum <br> decided to leave for the far World of Grammar.</p>
-                                  <a class="main-btn" href="#" data-animation="fadeInUp" data-delay="1.5s">Explore More <i class="lni-chevron-right"></i></a>
-                              </div> <!-- slider product content -->
-                          </div>
-                      </div> <!-- row -->
-                  </div> <!-- container -->
-              </div> <!-- single slider -->
 
-              <div class="single-slider">
-                      <div class="slider-bg">
-                          <div class="row no-gutters align-items-center">
-                              <div class="col-lg-4 col-md-5">
-                                  <div class="slider-product-image d-none d-md-block">
-                                      <img src="assets/images/slider/3.jpg" alt="Slider">
-                                      <div class="slider-discount-tag">
-                                          <p>-20% <br> OFF</p>
-                                      </div>
-                                  </div> <!-- slider product image -->
-                              </div>
-                              <div class="col-lg-8 col-md-7">
-                                  <div class="slider-product-content">
-                                      <h1 class="slider-title mb-10" data-animation="fadeInUp" data-delay="0.3s"><span>Winter</span> Sale! is <span>Here</span></h1>
-                                      <p class="mb-25" data-animation="fadeInUp" data-delay="0.9s">One day however a small line of blind text by the name of Lorem Ipsum <br> decided to leave for the far World of Grammar.</p>
-                                      <a class="main-btn" href="#" data-animation="fadeInUp" data-delay="1.5s">Explore More <i class="lni-chevron-right"></i></a>
-                                  </div> <!-- slider product content -->
-                              </div>
-                          </div> <!-- row -->
-                      </div> <!-- container -->
-              </div> <!-- single slider -->
+              {#each about as a_bout}
+                <div class="single-slider">
+                    <div class="slider-bg">
+                        <div class="row no-gutters align-items-center ">
+                            <div class="col-lg-4 col-md-5">
+                                <div class="slider-product-image d-none d-md-block">
+                                    <img src="{a_bout.picture}" alt="{a_bout.title}">
+                                    <!--<div class="slider-discount-tag">
+                                        <p>-50% <br> OFF</p>
+                                    </div>-->
+                                </div> <!-- slider product image -->
+                            </div>
+                            <div class="col-lg-8 col-md-7">
+                                <div class="slider-product-content">
+                                    <h1 class="slider-title mb-10" data-animation="fadeInUp" data-delay="0.3s">{a_bout.title}</h1>
+                                    <p class="mb-25" data-animation="fadeInUp" data-delay="0.9s">{a_bout.text}</p>
+                                    <!--<a class="main-btn" href="/" data-animation="fadeInUp" data-delay="1.5s">Explore More <i class="lni-chevron-right"></i></a>-->
+                                </div> <!-- slider product content -->
+                            </div>
+                        </div> <!-- row -->
+                    </div> <!-- container -->
+                </div> <!-- single slider -->
+              {/each}
 
-              <div class="single-slider">
-                      <div class="slider-bg">
-                          <div class="row no-gutters align-items-center">
-                              <div class="col-lg-4 col-md-5">
-                                  <div class="slider-product-image d-none d-md-block">
-                                      <img src="assets/images/slider/2.jpg" alt="Slider">
-                                      <div class="slider-discount-tag">
-                                          <p>FREE<br> QUOTE</p>
-                                      </div>
-                                  </div> <!-- slider product image -->
-                              </div>
-                              <div class="col-lg-8 col-md-7">
-                                  <div class="slider-product-content">
-                                      <h1 class="slider-title mb-10" data-animation="fadeInUp" data-delay="0.3s"><span>Get</span> a Free <span>Quote</span></h1>
-                                      <p class="mb-25" data-animation="fadeInUp" data-delay="0.9s">One day however a small line of blind text by the name of Lorem Ipsum <br> decided to leave for the far World of Grammar.</p>
-                                      <a class="main-btn" href="#contact" data-animation="fadeInUp" data-delay="1.5s">Contact Us <i class="lni-chevron-right"></i></a>
-                                  </div> <!-- slider product content -->
-                              </div>
-                          </div> <!-- row -->
-                      </div> <!-- container -->
-              </div> <!-- single slider -->
           </div> <!-- slider active -->
+
           <div class="slider-social">
               <div class="row justify-content-end">
                   <div class="col-lg-7 col-md-6">
                       <ul class="social text-right">
-                          <li><a href="#"><i class="lni-facebook-filled"></i></a></li>
-                          <li><a href="#"><i class="lni-twitter-original"></i></a></li>
-                          <li><a href="#"><i class="lni-instagram"></i></a></li>
-                          <li><a href="#"><i class="lni-medium"></i></a></li>
+                          <li><a href="/"><i class="lni-facebook-filled"></i></a></li>
+                          <li><a href="/"><i class="lni-twitter-original"></i></a></li>
+                          <li><a href="/"><i class="lni-instagram"></i></a></li>
                       </ul>
                   </div>
               </div>
@@ -137,23 +79,32 @@ let infos:object = {
                       <h2 class="title">Services</h2>
                   </div> <!-- showcase title -->
               </div> 
-              <div class="col-lg-6">
+              <div class="col-lg-8">
                   <div class="showcase-title pt-25">
-                      <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.</p>
+                      <p>Je masse dans mon salon, bougies, encens, douche possible. Attention j’ai un chat que laisse dans une autre partie de l’appart pendant le massage mais les poils peuvent presents dans le salon.</p>
+                      <p>Temps de recuperation où je vous proposerais un thé drainant.</p>
+                      <p>Je travaille avec des huiles neutres sans allergènes. J’utilise uniquement des huiles BIO première pression à froid et des Huiles Essentielles de qualité.</p>
                   </div> <!-- showcase title -->
               </div>
           </div> <!-- row -->
           <div class="row">
               <div class="col-lg-12">
                   <div class="showcase-active mt-65">
-                      <div class="single-showcase">
-                          <img src="assets/images/showcase/t-1.jpg" alt="Testimonial">
-                          <a href="#" class="main-btn">Full Preview</a>
+                      {#each services as service}
+                      <div class="single-showcase {service.class}">
+                          <div class="price {service.class}">
+                              <p>{service.price}€</p>
+                          </div>
+                          <div class="duration {service.class}">
+                              <p><i class="lni lni-timer"></i>{service.duration}</p>
+                          </div>
+                          <div class="desc">
+                            <p>{service.desc}</p>
+                          </div>
+                          <img src="{ service.picture }" alt="{service.name}">
+                          <a href="/" class="main-btn {service.class}">{service.name}</a>
                       </div> <!-- single showcase -->
-                      <div class="single-showcase">
-                          <img src="assets/images/showcase/t-2.jpg" alt="Testimonial">
-                          <a href="#" class="main-btn">Full Preview</a>
-                      </div> <!-- single showcase -->
+                      {/each}
                   </div> <!-- showcase active -->
               </div>
           </div> <!-- row -->
@@ -164,7 +115,8 @@ let infos:object = {
     
     <div class="container">
 
-      <iframe src="https://calendar.google.com/calendar/embed?src=family07472837986232886021%40group.calendar.google.com&ctz=Europe%2FParis" style="border: 0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
+      <p style="margin:20px 0">De part mon activité, j’ouvre des plages à la reservation de massages à des moments precis. Voici les créneaux disponibles ci-dessous.</p>
+      <iframe title="agenda" src="https://calendar.google.com/calendar/embed?src=family07472837986232886021%40group.calendar.google.com&ctz=Europe%2FParis" style="border: 0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
 
     </div>
 
@@ -172,104 +124,60 @@ let infos:object = {
 
   <section id="avis" class="blog-area pt-125">
       <div class="container">
+          <div class="row">
+              <div class="col-lg-4">
+                  <div class="showcase-title pt-25">
+                      <h2 class="title">Avis</h2>
+                  </div> <!-- showcase title -->
+              </div> 
+          </div>
           <div class="row justify-content-center">
-              <div class="col-lg-6">
-                  <div class="text-center">
-                    <h2 class="title">Avis</h2>
-                </div> <!-- contact title -->
-              </div>
-          </div> <!-- row -->
-          <div class="row justify-content-center">
-              <div class="col-lg-4 col-md-6">
-                  <div class="single-blog mt-30">
-                      <div class="blog-content">
-                          <div class="content">
-                              <h4 class="title"><a href="#">Rowan an orangutan known  & loved</a></h4>
-                              <span>25 JULY, 2022</span>
-                          </div>
-                          <div class="meta d-flex justify-content-between align-items-center">
-                              <div class="meta-admin d-flex align-items-center">
-                                 
-                                  <div class="admin-title">
-                                      <h6 class="title"><a href="#">J. PARKER</a></h6>
-                                  </div>
-                              </div>  <!-- meta admin -->
-                              <div class="meta-icon">
-                                  <ul>
-                                      <li><a href="#"><i class="lni-share"></i></a></li>
-                                      <li><a href="#"><i class="lni-heart"></i></a></li>
-                                  </ul>
-                              </div> <!-- meta icon -->
-                          </div> <!-- meta -->
-                      </div>
-                  </div> <!-- single blog -->
-              </div>
-              <div class="col-lg-4 col-md-6">
-                  <div class="single-blog mt-30">
-                      <div class="blog-content">
-                          <div class="content">
-                              <h4 class="title"><a href="#">Rowan an orangutan known  & loved</a></h4>
-                              <span>25 JULY, 2022</span>
-                          </div>
-                          <div class="meta d-flex justify-content-between align-items-center">
-                              <div class="meta-admin d-flex align-items-center">
-                                 
-                                  <div class="admin-title">
-                                      <h6 class="title"><a href="#">J. PARKER</a></h6>
-                                  </div>
-                              </div>  <!-- meta admin -->
-                              <div class="meta-icon">
-                                  <ul>
-                                      <li><a href="#"><i class="lni-share"></i></a></li>
-                                      <li><a href="#"><i class="lni-heart"></i></a></li>
-                                  </ul>
-                              </div> <!-- meta icon -->
-                          </div> <!-- meta -->
-                      </div>
-                  </div> <!-- single blog -->
-              </div>
-              <div class="col-lg-4 col-md-6">
-                  <div class="single-blog mt-30">
-                      <div class="blog-content">
-                          <div class="content">
-                              <h4 class="title"><a href="#">Rowan an orangutan known  & loved</a></h4>
-                              <span>25 JULY, 2022</span>
-                          </div>
-                          <div class="meta d-flex justify-content-between align-items-center">
-                              <div class="meta-admin d-flex align-items-center">
-                                  
-                                  <div class="admin-title">
-                                      <h6 class="title"><a href="#">J. PARKER</a></h6>
-                                  </div>
-                              </div>  <!-- meta admin -->
-                              <div class="meta-icon">
-                                  <ul>
-                                      <li><a href="#"><i class="lni-share"></i></a></li>
-                                      <li><a href="#"><i class="lni-heart"></i></a></li>
-                                  </ul>
-                              </div> <!-- meta icon -->
-                          </div> <!-- meta -->
-                      </div>
-                  </div> <!-- single blog -->
-              </div>
+              
+              {#each avis as av}
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-blog mt-30">
+                        <div class="blog-content">
+                            <div class="content">
+                                <h4 class="title">"{av.title}"</h4>
+                                <span>{ av.date }</span>
+                            </div>
+                            <div class="meta d-flex justify-content-between align-items-center">
+                                <div class="meta-admin d-flex align-items-center">
+                                   
+                                    <div class="admin-title">
+                                        <h6 class="title"><a href="/">{ av.author }</a></h6>
+                                    </div>
+                                </div>  <!-- meta admin -->
+                                <div class="meta-icon">
+                                    <ul>
+                                        <li><a href="/"><i class="lni-share"></i></a></li>
+                                        <li><a href="/"><i class="lni-heart"></i></a></li>
+                                    </ul>
+                                </div> <!-- meta icon -->
+                            </div> <!-- meta -->
+                        </div>
+                    </div> <!-- single blog -->
+                </div>
+              {/each}
+
           </div> <!-- row -->
       </div> <!-- container -->
   </section>
 
   <section id="contact" class="contact-area pt-115">
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-6">
-                <div class="contact-title text-center">
-                    <h2 class="title">Get In Touch</h2>
-                </div> <!-- contact title -->
-            </div>
-        </div> <!-- row -->
+        <div class="row">
+              <div class="col-lg-4">
+                  <div class="showcase-title pt-25">
+                      <h2 class="title">Contactez-moi</h2>
+                  </div> <!-- showcase title -->
+              </div> 
+          </div>
         <div class="contact-box mt-70">
             <div class="row">
                 <div class="col-lg-4">
                     <div class="contact-info pt-25">
-                        <h4 class="info-title">Contact Info</h4>
+                        <h4 class="info-title">Informations de contact</h4>
                         <ul>
                             <li>
                                 <div class="single-info mt-30">
@@ -277,17 +185,29 @@ let infos:object = {
                                         <i class="lni-phone-handset"></i>
                                     </div>
                                     <div class="info-content">
-                                        <p>{infos.phone}</p>
+                                        <p><a href="tel:{infos.phone}">{infos.phone}</a></p>
                                     </div>
                                 </div> <!-- single info -->
                             </li>
+
+                            <li>
+                                <div class="single-info mt-30">
+                                    <div class="info-icon">
+                                        <i class="lni lni-whatsapp"></i>
+                                    </div>
+                                    <div class="info-content">
+                                        <p><a href="https://wa.me/{infos.phone}">{infos.phone}</a></p>
+                                    </div>
+                                </div> <!-- single info -->
+                            </li>
+
                             <li>
                                 <div class="single-info mt-30">
                                     <div class="info-icon">
                                         <i class="lni-envelope"></i>
                                     </div>
                                     <div class="info-content">
-                                        <p>{infos.email}</p>
+                                        <p><a href="mailto:{infos.email}">{infos.email}</a></p>
                                     </div>
                                 </div> <!-- single info -->
                             </li>
@@ -310,26 +230,26 @@ let infos:object = {
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="single-form form-group">
-                                        <input type="text" name="name" placeholder="Enter Your Name" data-error="Name is required." required="required">
+                                        <input type="text" name="name" placeholder="Entrez votre nom" data-error="Name is required." required="required">
                                         <div class="help-block with-errors"></div>
                                     </div> <!-- single form -->
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="single-form form-group">
-                                        <input type="email" name="email" placeholder="Enter Your Email"  data-error="Valid email is required." required="required">
+                                        <input type="email" name="email" placeholder="Entrez votre email"  data-error="Valid email is required." required="required">
                                         <div class="help-block with-errors"></div>
                                     </div> <!-- single form -->
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="single-form form-group">
-                                        <textarea name="message" placeholder="Enter Your Message" data-error="Please,leave us a message." required="required"></textarea>
+                                        <textarea name="message" placeholder="Votre message" data-error="Please,leave us a message." required="required"></textarea>
                                         <div class="help-block with-errors"></div>
                                     </div> <!-- single form -->
                                 </div>
                                 <p class="form-message"></p>
                                 <div class="col-lg-12">
                                     <div class="single-form form-group">
-                                        <button class="main-btn" type="submit">CONTACT NOW</button>
+                                        <button class="main-btn" type="submit">Envoyer</button>
                                     </div> <!-- single form -->
                                 </div>
                             </div> <!-- row -->
@@ -345,62 +265,78 @@ let infos:object = {
       <div class="container">
           <div class="footer-widget pt-75 pb-120">
               <div class="row">
-                  <div class="col-lg-3 col-md-5 col-sm-7">
+                  <div class="col-lg-6 col-md-6 col-sm-6">
                       <div class="footer-logo mt-40">
                           <a href="/">
                               <img style="max-height: 80px;" src="assets/images/logo.png" alt="Logo">
                           </a>
                           <p class="mt-10">Nicolas Berteyac, masseur, de père en fils depuis 1876</p>
                           <ul class="footer-social mt-25">
-                              <li><a href="#"><i class="lni-facebook-filled"></i></a></li>
-                              <li><a href="#"><i class="lni-twitter-original"></i></a></li>
-                              <li><a href="#"><i class="lni-instagram"></i></a></li>
+                              <li><a href="/"><i class="lni-facebook-filled"></i></a></li>
+                              <li><a href="/"><i class="lni-twitter-original"></i></a></li>
+                              <li><a href="/"><i class="lni-instagram"></i></a></li>
                           </ul>
                       </div> <!-- footer logo -->
                   </div>
-                  <div class="col-lg-3 col-md-4 col-sm-5">
+                  <!--<div class="col-lg-3 col-md-4 col-sm-5">
                       <div class="footer-link mt-50">
                           <h5 class="f-title">Services</h5>
                           <ul>
                               {#each services as serv}
-                              <li><a href="#">{serv.name}</a></li>
+                              <li><a href="/">{serv.name}</a></li>
                               {/each}
                           </ul>
-                      </div> <!-- footer link -->
+                      </div>
                   </div>
                   <div class="col-lg-2 col-md-3 col-sm-5">
                       <div class="footer-link mt-50">
                           <h5 class="f-title">Avis</h5>
                           <ul>
                               {#each avis as av}
-                              <li><a href="#">{av.title}</a></li>
+                              <li><a href="/">{av.title}</a></li>
                               {/each}
                           </ul>
-                      </div> <!-- footer link -->
-                  </div>
-                  <div class="col-lg-4 col-md-5 col-sm-7">
+                      </div>
+                  </div>-->
+                  <div class="col-lg-6 col-md-6 col-sm-6">
                       <div class="footer-info mt-50">
-                          <h5 class="f-title">Contact Info</h5>
+                          <h5 class="f-title">Informations de contact</h5>
                           <ul>
                               <li>
                                   <div class="single-footer-info mt-20">
-                                      <span>Téléphone :</span>
+                                      <span><i class="lni-phone-handset"></i></span>
                                       <div class="footer-info-content">
-                                          <p>{infos.phone}</p>
+                                          <p><a href="tel:{infos.phone}">{infos.phone}</a></p>
                                       </div>
                                   </div> <!-- single footer info -->
                               </li>
                               <li>
                                   <div class="single-footer-info mt-20">
-                                      <span>Email :</span>
+                                      <span><i class="lni-whatsapp"></i></span>
                                       <div class="footer-info-content">
-                                         <p>{infos.email}</p>
+                                          <p><a href="https://wa.me/{infos.phone}">{infos.phone}</a></p>
+                                      </div>
+                                  </div> <!-- single footer info -->
+                              </li>
+                               <li>
+                                  <div class="single-footer-info mt-20">
+                                      <span><i class="lni lni-facebook-messenger"></i></span>
+                                      <div class="footer-info-content">
+                                          <p><a href="http://m.me/{infos.facebook}">{infos.facebook}</a></p>
                                       </div>
                                   </div> <!-- single footer info -->
                               </li>
                               <li>
                                   <div class="single-footer-info mt-20">
-                                      <span>Addresse :</span>
+                                      <span><i class="lni lni-envelope"></i></span>
+                                      <div class="footer-info-content">
+                                         <p><a href="mailto:{infos.email}">{infos.email}</a></p>
+                                      </div>
+                                  </div> <!-- single footer info -->
+                              </li>
+                              <li>
+                                  <div class="single-footer-info mt-20">
+                                      <span><i class="lni-home"></i></span>
                                       <div class="footer-info-content">
                                          <p>{infos.address}</p>
                                       </div>
@@ -415,7 +351,7 @@ let infos:object = {
               <div class="row">
                   <div class="col-lg-12">
                       <div class="copyright text-center">
-                          <p>Crafted by <a href="https://uideck.com" rel="nofollow">UIdeck</a></p>
+                          <p>Made with <a href="https://vitejs.dev/">ViteJS <img src="{viteLogo}" alt="Vite JS"></a>, on top of <a href="https://svelte.dev/" target="_blank">Svetle <img src="{svelteLogo}" alt="Svelte"></a>, theme from <a href="https://uideck.com" rel="nofollow">UIdeck</a></p>
                       </div> <!-- copyright -->
                   </div>
               </div> <!-- row -->

@@ -112,7 +112,6 @@ p {
   white-space: nowrap;
   vertical-align: middle;
   @inlude user-select(none);
-  border: 1px solid #324532;
   padding: 0 35px;
   font-size: 16px;
   line-height: 48px;
@@ -441,8 +440,12 @@ p {
       font-weight: 600;
       line-height: 33px; }
   .single-slider .slider-product-content {
-    max-width: 670px;
+    
     margin-left: 125px; }
+
+  .single-slider .slider-product-content p{
+    font-size: 1.2em;
+  }
     @media only screen and (min-width: 992px) and (max-width: 1200px) {
       .single-slider .slider-product-content {
         margin-left: 100px; } }
@@ -454,7 +457,7 @@ p {
         margin-left: 0;
         padding: 40px 15px 50px; } }
     .single-slider .slider-product-content .slider-title {
-      font-size: 92px;
+      font-size: 3em;
       z-index: 1; }
       @media only screen and (min-width: 992px) and (max-width: 1200px) {
         .single-slider .slider-product-content .slider-title {
@@ -863,10 +866,77 @@ p {
     position: absolute;
     line-height: 78px;
     padding: 0 70px;
-    left: 60px;
-    bottom: -40px;
+    left: 30px;
+    bottom: 30px;
     font-size: 20px;
     font-weight: 600; }
+
+  .single-showcase .desc{
+    width: 50% ;
+    text-align: left;
+    padding: 20px ;
+    background-color: rgba(0,0,0,.5);
+    right: 30px;
+    top: 60%;
+    position: absolute;
+  }
+
+  .single-showcase .desc p{
+    color: #fff ;
+  }
+
+  .single-showcase .price {
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    text-align: center;
+    display: table;
+    left: 30px;
+    top: 30px;
+    position: absolute;
+  }
+
+  .single-showcase .price p{
+    display: table-cell;
+    vertical-align: middle;
+    color: #fff;
+    font-size: 2.2em;
+    font-weight: 600;
+    line-height: 33px;
+  }
+
+  .single-showcase .duration{
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    text-align: center;
+    display: table;
+    left: 30px;
+    top: 200px;
+    position: absolute;
+  }
+
+  .single-showcase .duration p{
+    display: table-cell;
+    vertical-align: middle;
+    color: #fff;
+    font-size: 2.2em;
+    font-weight: 600;
+    line-height: 33px;
+  }
+
+  .single-showcase .reflexo{
+    background-color: #0F0F1A; ;
+  }
+
+  .single-showcase .suedois{
+    background-color: #B59D95; ;
+  }
+
+  .single-showcase .ayurveda{
+    background-color: #926648; ;
+  }
+
     @media (max-width: 767px) {
       .single-showcase .main-btn {
         line-height: 48px;
@@ -1054,7 +1124,9 @@ p {
     border: 1px solid #ddd;
     border-top: 0; }
     .single-blog .blog-content .content {
-      padding: 20px 30px 25px; }
+      padding: 20px 30px 25px; 
+      min-height: 130px ;
+      }
       .single-blog .blog-content .content .title a {
         font-size: 20px;
         color: #333;
@@ -1293,9 +1365,16 @@ p.form-message.error {
 .footer-copyright {
   border-top: 1px solid #ddd; }
   .footer-copyright a {
+    text-decoration: none ;
     color: #324532; }
+  .footer-copyright a:hover {
+    text-decoration: underline ;
+  }
   .footer-copyright .copyright p {
     color: #333; }
+    .footer-copyright .copyright img{
+      max-height: 20px;
+    }
     @media (max-width: 767px) {
       .footer-copyright .copyright p {
         font-size: 14px; } }
