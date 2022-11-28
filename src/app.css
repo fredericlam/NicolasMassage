@@ -47,6 +47,22 @@ h1 {
   text-align: left;
 }
 
+.picture_{
+  min-width: 100%;
+  padding: 20px 40px;
+  min-height: 600px;
+  font-size: 5em;
+  background-color: #eeeecc ;
+}
+
+.contact_{
+  text-align: center;
+}
+.contact_ span{
+  display: block;
+  margin: 20px;
+}
+
 a.navbar-brand{
   text-decoration: none ;
   font-size: 2.2em;
